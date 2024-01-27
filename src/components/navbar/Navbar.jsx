@@ -3,12 +3,13 @@ import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={styles.navbar}>
-      <a href="/" className={styles.title}>
-        Porfolio
+      <a href="/" className={styles.title} >
+        It's Me
       </a>
       <div className={styles.menu}>
         <img
@@ -26,16 +27,16 @@ export const Navbar = () => {
           onClick={() => setMenuOpen(false)}
         >
           <li>
-            <a href="#about">About</a>
+            <a href="#about" className={styles.roundLink}>About</a>
           </li>
           <li>
-            <a href="#about">Experience</a>
+            <a href="#about" className={styles.roundLink}>Experience</a>
           </li>
           <li>
-            <a href="#about">Project</a>
+            <a href="#about" className={styles.roundLink}>Project</a>
           </li>
           <li>
-            <a href="#about">Contact</a>
+            <a href="#about" className={styles.roundLink}>Contact</a>
           </li>
         </ul>
       </div>

@@ -3,8 +3,9 @@
     --color-text:#fff;
     --color-primary:#576cbc;
     --color-secondary:#19376d;
-    --color-dark:#ob2447;
+    --color-dark:#0b2447;
     --color-bg:#04152d;
+    --color-black: #1e1d1d;
 
     /* Fonts */
     -font-robot:"Roboto";
