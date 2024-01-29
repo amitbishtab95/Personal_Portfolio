@@ -11,11 +11,12 @@ function App() {
     <>
      <div className={styles.App}>
       <Navbar/>
+      {/* <div className='amit'>jhkjhkj</div> */}
       <Introduction/>
-      <About/>
-      <Experience/>
-      <Projects/>
-      <Contact/>
+      {/* <About/> */}
+      {/* <Experience/> */}
+      {/* <Projects/> */}
+      {/* <Contact/> */}
      </div>
     </>
   )

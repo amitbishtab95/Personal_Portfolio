@@ -5,25 +5,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
+  /* margin-top: 49px; */
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  padding: 60px 10%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  background-color: var(--color-bg);
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   align-items: flex-start;
   color: var(--color-text);
   z-index: 1;
 }
 
 .title {
-  font-size: 72px;
-  font-weight: 900;
-  margin-bottom: 33px;
-  font-family: var(--font-roboto);
+  font-size: 65px;
+  font-weight: 800;
+  margin-bottom: 30px;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 70%,
@@ -35,25 +37,39 @@
 
 .description {
   font-size: 30px;
-  font-family: var(--font-roboto);
+  /* font-family: var(--font-roboto); */
   margin-bottom: 52px;
 }
-
-.contactBtn {
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactBtn, .downloadBtn {
   text-decoration: none;
   background-color: var(--color-primary);
   color: var(--color-text);
   border-radius: 100px;
-  font-size: 30px;
-  font-weight: 600;
-  padding: 17px 26px;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border: 2px solid white;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+.downloadBtn{
+  margin-left: 1rem;
+}
+.contactBtn:hover , .downloadBtn:hover{
+  background-color: white;
+  color: black;
+  transition: 0.5s;
 }
 
 .heroImg {
-  width: 50%;
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
   z-index: 1;
-
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -100,12 +116,39 @@
   z-index: 0;
 }
 
+/* tablet */
 @media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .content {
+    align-items: center;
+    word-wrap: break-word;
+  }
+
+  .description{
+    text-align: center;
+  }
+  .btns{
+    flex-direction: column;
+  }
+  .downloadBtn{
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+/* mobile */
+@media screen and (max-width:472){
   .container {
     flex-direction: column-reverse;
   }
 
   .content {
     align-items: center;
+
   }
 }
